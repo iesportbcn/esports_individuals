@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>esports_individuals</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #111a2f;
+        --primary: #7c3aed;
+        --accent: #22d3ee;
+        --text: #e5e7eb;
+        --muted: #a5b4cf;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #0b1020 0%, #121a2c 100%);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .brand {
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: lowercase;
+      }
+
+      nav {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 32px;
+        align-items: center;
+        padding: 64px 0 48px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        background: rgba(34, 211, 238, 0.12);
+        color: var(--accent);
+        border: 1px solid rgba(34, 211, 238, 0.35);
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 4vw, 4.5rem);
+        line-height: 1.05;
+        margin: 20px 0 16px;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.7;
+        max-width: 620px;
+      }
+
+      .actions {
+        margin-top: 28px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        padding: 14px 22px;
+        border-radius: 12px;
+        font-weight: 700;
+        transition: transform 0.2s ease;
+      }
+
+      .btn:hover { transform: translateY(-1px); }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #8b5cf6);
+        color: white;
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(255,255,255,0.12);
+        color: var(--text);
+        background: rgba(255,255,255,0.02);
+      }
+
+      .card {
+        background: rgba(17, 26, 47, 0.92);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .stat {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 14px;
+        padding: 18px 14px;
+        text-align: center;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 24px;
+      }
+
+      .feature {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 18px;
+        padding: 22px;
+      }
+
+      .feature h3 {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      footer {
+        text-align: center;
+        color: var(--muted);
+        padding: 40px 0 30px;
+      }
+
+      @media (max-width: 800px) {
+        .hero,
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        header {
+          flex-direction: column;
+          gap: 12px;
+          align-items: flex-start;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">esports_individuals</div>
+        <nav>
+          <a href="#inicio">Inicio</a>
+          <a href="#deporte">Deporte</a>
+          <a href="#comunidad">Comunidad</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </header>
+
+      <main id="inicio">
+        <section class="hero">
+          <div>
+            <span class="eyebrow">Club & comunidad</span>
+            <h1>Tu próxima victoria empieza aquí.</h1>
+            <p class="lead">
+              esports_individuals reúne talento, disciplina y comunidad para impulsar jugadores,
+              proyectos y eventos del mundo competitivo.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="#comunidad">Únete</a>
+              <a class="btn btn-secondary" href="#deporte">Ver más</a>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <strong>120+</strong>
+                <span>jugadores</span>
+              </div>
+              <div class="stat">
+                <strong>14</strong>
+                <span>eventos</span>
+              </div>
+              <div class="stat">
+                <strong>8</strong>
+                <span>equipos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="deporte">
+            <h2>Resumen</h2>
+            <p>Fomentamos la mejora continua, la competitividad sana y la colaboración entre jugadores y creadores.</p>
+            <ul>
+              <li>Entrenamiento y desarrollo individual</li>
+              <li>Eventos y torneos para la comunidad</li>
+              <li>Contenido y visibilidad para talentos</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature-grid" id="comunidad">
+          <article class="feature">
+            <h3>Competencia</h3>
+            <p>Organizamos experiencias que combinan esfuerzo, estrategia y espíritu de mejora constante.</p>
+          </article>
+          <article class="feature">
+            <h3>Comunidad</h3>
+            <p>Conectamos jugadores, entrenadores y aficionados para crear una red sólida y activa.</p>
+          </article>
+          <article class="feature">
+            <h3>Creación</h3>
+            <p>Impulsamos contenido, networking y oportunidades para crecer dentro del ecosistema.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer id="contacto">
+        <p>© 2026 esports_individuals</p>
+      </footer>
+    </div>
+  </body>
+</html>
